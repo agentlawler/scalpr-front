@@ -49,7 +49,7 @@ header nav{
 header nav ul{
   display: flex;
   list-style: none;
-  gap: 8px;
+  gap: 24px;
   font-weight: bold;
   width: 100%;
   max-width: 350px;
@@ -85,21 +85,32 @@ header nav .active{
   gap: 16px;
 }
 
-.Venues .venue{
+.Venues .venue, .Venues .venue a{
+  display: block;
   position: relative;
   max-width: 472px;
+  width: 100%;
   aspect-ratio: 1/1;
   overflow: hidden;
   border-radius: 16px; 
   box-shadow: 0 0 10px 10px rgba(0,0,0,0.1);
-  border: 1px solid var(--purple4)
+  border: 1px solid var(--purple4);
+  background-size: cover;
+  opacity: .75;
+  border: 1px solid var(--black);
+  transition: all .6s ease;
+}
+
+.Venues .venue:hover{
+  opacity: 1;
+  border-color: var(--purple4);
 }
 
 .Venues .venue img{
   width: 100%;
 }
 
-.Venues .venue h3{
+.Venues .venue .info{
   position: absolute;
   top:45%;
   width: 100%;
