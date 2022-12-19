@@ -21,12 +21,12 @@ export default function Shows() {
                         <img src={show.image} alt={show.name} />
                         <h3>{show.name}</h3>
                     </Link>
-                    </div>
+                </div>
             ))}
-
         </div>
     </div>
   ) : (
     <h1> Loading Please Wait ... </h1>
   )
 }
+// updated files
