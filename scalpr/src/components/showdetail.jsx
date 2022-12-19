@@ -10,7 +10,7 @@ export default function ShowDetail () {
     const [show, setShow] = useState([])
     useEffect(() => {
         const getShow = async () => {
-            const response = await axios.get(`http://localhost:8000/api/venues/${show.id}`)
+            const response = await axios.get(`http://localhost:8000/api/shows/${id}`)
             setShow(response.data)
         }
         getShow()
