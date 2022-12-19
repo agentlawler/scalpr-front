@@ -6,7 +6,6 @@ export default function Affiliates () {
         <div className="affiliates">
             <div >
                 <h2>affiliates</h2>
-                
             </div>
         </div>
     )
