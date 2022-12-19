@@ -20,7 +20,14 @@ body{
 
 }
 
-header{
+.App{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+header, footer{
   padding: 16px;
   max-width: 960px;
   margin: 0 auto;
@@ -65,3 +72,29 @@ header nav .active{
   border-color: var(--purple4)
 
 }
+
+footer .affiliates{
+  display: flex;
+  gap: 16px;
+  max-width: 350px;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+  
+}
+
+footer .affiliates img{
+  width: 24px;
+  position: relative;
+  bottom: 0;
+  transition: all .6s ease;
+}
+
+footer .affiliates img:hover{
+  bottom: 8px;
+}
+
+footer .footerInfo{
+  padding-top: 16px;
+}
+

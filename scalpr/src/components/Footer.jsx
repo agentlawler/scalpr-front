@@ -1,26 +1,28 @@
+import ScalprLogo from "../assets/scalpr_logo.png"
 export default function Footer () {
 
 
 
     return (
         <footer>
-            <div >
+            <div className="affiliates">
                 <div className="ticketmaster">
-                    <img src="https://play-lh.googleusercontent.com/KmWVboPY-BCCfiflJ-AYCPGBv86QLMsXsSpvQksC0DVR8ENV0lh-lwHnXrekpHwbQA=s256-rw" alt="ticketmasterIcon" />
-                        <a href="https://www.ticketmaster.com/">Ticektmaster</a>
+                <a href="https://www.ticketmaster.com/">
+                    <img src="https://play-lh.googleusercontent.com/KmWVboPY-BCCfiflJ-AYCPGBv86QLMsXsSpvQksC0DVR8ENV0lh-lwHnXrekpHwbQA=s256-rw" alt="Ticket Master" /></a>
                     </div>
                     <div className="seatgeek">
-                        <img src="https://play-lh.googleusercontent.com/rDMsfzq4RwA6Kf4OZIMnoC9338Bvm4kO9FjMzCYPYbM-mz6MdOWmOJGG2KGwBMmeTJw" alt="seatgeekIcon"/>
-                        <a href="https://seatgeek.com/">SeatGeek</a>
+                    <a href="https://seatgeek.com/"><img src="https://seatgeek.com/images/mobile-app/iosIcon-new.png" alt="seatgeekIcon"/></a>
                     </div>
                     <div className="Twitter">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Twitter-logo.svg/2491px-Twitter-logo.svg.png" alt="twitterIcon"/>
-                        <a href="https://www.twitter.com">Twitter</a>
+                    <a href="https://www.twitter.com"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Twitter-logo.svg/2491px-Twitter-logo.svg.png" alt="twitterIcon"/></a>
                     </div>
                     <div className="facebook">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Twitter-logo.svg/2491px-Twitter-logo.svg.png" alt="facebookIcon"/>
-                        <a href="https://www.facebook.com">Facebook</a>
+                    <a href="https://www.facebook.com"><img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Facebook_logo_%28square%29.png" alt="facebookIcon"/></a>
                     </div>
+            </div>
+            <div className="footerInfo">
+         
+                <small>&copy; Lindsey Lawyer, Matt Kiska, Andrew Zheng, &amp; Devon Jones</small>
             </div>
         </footer>
     )
