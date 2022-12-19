@@ -24,11 +24,14 @@ export default function ShowDetail () {
                     <img src={show.image} alt={show.name} />
                     </div>
                     <div className="showdetail-info">
-                        <h1>{show.name}</h1>
-                        <h2>{show.address}</h2>
-                        <h2>{show.phone}</h2>
-                        <h2>{show.website}</h2>
-                        <h2>{show.description}</h2>
+                        <h2>{show.title}</h2>
+                        <br></br>
+                        <h3>Available {show.month}-{show.day}-{show.year} beginning at {show.door_time}</h3>
+                        <br></br>
+                        <h4>{show.description}</h4>
+                        <br></br>
+                        <h2><a href={show.tickets_url}>Find tickets here!</a></h2>
+                        <h3>Starting at ${show.price_min}</h3>
                     </div>
                 </div>
         </div>

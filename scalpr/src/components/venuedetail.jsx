@@ -27,10 +27,12 @@ export default function VenueDetail () {
                     </div>
                     <div className="venuedetail-info">
                         <h1>{venue.name}</h1>
-                        <h2>{venue.address}</h2>
-                        <h2>{venue.phone}</h2>
-                        <h2>{venue.website}</h2>
-                        <h2>{venue.description}</h2>
+                        <h3>{venue.address}</h3>
+                        <h3>{venue.phone_number}</h3>
+                        <br></br>
+                        <h3>{venue.description}</h3>
+                        <br></br>
+                        <h2><a href={venue.website}>Check out more on their website</a></h2>
                     </div>
                 </div>
         </div>
