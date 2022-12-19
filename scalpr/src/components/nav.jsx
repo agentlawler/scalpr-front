@@ -13,7 +13,7 @@ export default function Nav () {
                 <Link to="/mytickets" className="link">My Tickets</Link>
                 <Link to="/shows" className="link">Shows</Link>
                 <Link to="/venues" className="link">Venues</Link>
-                <Link to="/affiliates" className="link">Affiliates</Link>
+               
             </div>
         </div>
     )
