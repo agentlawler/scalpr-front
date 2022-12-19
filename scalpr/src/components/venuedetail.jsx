@@ -8,7 +8,7 @@ export default function VenueDetail () {
     const [venue, setVenue] = useState([])
     useEffect(() => {
         const getVenue = async () => {
-            const response = await axios.get("")
+            const response = await axios.get(`http://localhost:8000/api/venues/${venue.id}`)
             setVenue(response.data)
         }
         getVenue()
