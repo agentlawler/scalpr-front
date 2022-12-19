@@ -44,6 +44,20 @@ In the digital age, phsyical tickets have become a thing of the past and with it
 - `var(--green)`
 ![#5DAF66](https://placehold.co/15x15/5DAF66/5DAF66.png) `5DAF66` , `RGB: 93, 175, 102`
 
+## Endpoints
 
+```
+all venues
+http://localhost:8000/api/venues/
+
+particular venue
+http://localhost:8000/api/venues/:id
+
+all shows
+http://localhost:8000/api/shows/
+
+particular show
+http://localhost:8000/api/venues/:id
+```
 
 
