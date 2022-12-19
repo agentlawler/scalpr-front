@@ -53,6 +53,7 @@ header nav ul{
   font-weight: bold;
   width: 100%;
   max-width: 350px;
+  justify-content: center;
 }
 header nav ul a{
   color: var(--white);
@@ -71,6 +72,42 @@ header nav .active{
   opacity: 1;
   border-color: var(--purple4)
 
+}
+
+.container{
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.Venues{
+  display: flex;
+  gap: 16px;
+}
+
+.Venues .venue{
+  position: relative;
+  max-width: 472px;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  border-radius: 16px; 
+  box-shadow: 0 0 10px 10px rgba(0,0,0,0.1);
+  border: 1px solid var(--purple4)
+}
+
+.Venues .venue img{
+  width: 100%;
+}
+
+.Venues .venue h3{
+  position: absolute;
+  top:45%;
+  width: 100%;
+  background: var(--black);
+  padding: 8px;
+  color: var(--white);
+  text-transform: uppercase;
+  text-align: center;
 }
 
 footer .affiliates{
