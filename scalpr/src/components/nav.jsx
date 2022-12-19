@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 
 
 
@@ -7,14 +7,14 @@ export default function Nav () {
 
 
     return (
-        <div className="nav">
-            <div className="navbar-links">
-                <Link to="/" className="link">Home</Link>
-                <Link to="/mytickets" className="link">My Tickets</Link>
-                <Link to="/shows" className="link">Shows</Link>
-                <Link to="/venues" className="link">Venues</Link>
-               
-            </div>
-        </div>
+        <nav>
+            <ul className="navbar-links">
+                <li><NavLink to="/">Home</NavLink></li>
+                <li><NavLink to="/mytickets">My Tickets</NavLink></li>
+                <li><NavLink to="/shows">Shows</NavLink></li>
+                <li><NavLink to="/venues">Venues</NavLink></li>
+                <li><NavLink to="/affiliates">Affiliates</NavLink></li>
+            </ul>
+        </nav>
     )
 }
