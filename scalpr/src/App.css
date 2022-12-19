@@ -1,38 +1,67 @@
-.App {
-  text-align: center;
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html{
+  --black: #1A1A1A;
+  --purple1: #7D449A;
+  --purple2: #8751A0;
+  --purple3: #9256A3;
+  --purple4: #A671B0;
+  --green: #5DAF66;
+  --white: #f5f5f5;
+  background: var(--black);
+  color: var(--white)
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body{
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header{
+  padding: 16px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+header .logo{
+  display: block;
+  max-width: 330px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+header nav{
+  margin: 0 auto;
+  width: 100%;
+  max-width: 350px;
+  padding: 16px 0;
+}
+header nav ul{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  list-style: none;
+  gap: 8px;
+  font-weight: bold;
+  width: 100%;
+  max-width: 350px;
+}
+header nav ul a{
+  color: var(--white);
+  text-decoration: none;
+  padding-bottom: 2px;
+  opacity: .7;
+  border-bottom: 2px solid var(--black);
+  transition: all .6s ease;
+}
+header nav ul a:hover{
+  opacity: 1;
 }
 
-.App-link {
-  color: #61dafb;
-}
+header nav .active{
+  pointer-events: none;
+  opacity: 1;
+  border-color: var(--purple4)
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
