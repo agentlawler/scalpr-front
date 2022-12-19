@@ -10,10 +10,9 @@ export default function Nav () {
         <nav>
             <ul className="navbar-links">
                 <li><NavLink to="/">Home</NavLink></li>
-                <li><NavLink to="/mytickets">My Tickets</NavLink></li>
-                <li><NavLink to="/shows">Shows</NavLink></li>
                 <li><NavLink to="/venues">Venues</NavLink></li>
-                <li><NavLink to="/affiliates">Affiliates</NavLink></li>
+                <li><NavLink to="/shows">Shows</NavLink></li>
+                
             </ul>
         </nav>
     )
