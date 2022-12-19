@@ -101,7 +101,7 @@ header nav .active{
   transition: all .6s ease;
 }
 
-.Venues .venue:hover{
+.Venues .venue:hover, .Venues .venue a:hover{
   opacity: 1;
   border-color: var(--purple4);
 }
@@ -119,6 +119,12 @@ header nav .active{
   color: var(--white);
   text-transform: uppercase;
   text-align: center;
+  transition: all .6s ease;
+}
+
+.Venues .venue:hover .info{
+  background: var(--purple4);
+  color: var(--black);
 }
 
 footer .affiliates{
