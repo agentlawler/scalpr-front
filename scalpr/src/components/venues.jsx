@@ -18,8 +18,9 @@ export default function Venues() {
             {venues.map((venue) => (
                 <div className="venue" key={venue.id}>
                     <Link to={`/venues/${venue.id}`}>
-                        <img src={venue.image} alt={venue.name} />
+                        <img src={venue.image} alt={venue.name} height="200px"/>
                         <h3>{venue.name}</h3>
+                        <h4>{venue.address}</h4>
                     </Link>
                 </div>
             ))}

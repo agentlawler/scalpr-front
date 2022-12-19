@@ -18,9 +18,11 @@ export default function Shows() {
             {shows.map((show) => (
                 <div className="show" key={show.id}>
                     <Link to={`/shows/${show.id}`}>
-                        <img src={show.image} alt={show.name} />
-                        <h3>{show.name}</h3>
+                        <img src={show.image} alt={show.title} height="200px"/>
+                        <h3>{show.title}</h3>
+                        <h4> Live on: {show.month}, {show.day}, {show.year} at {show.door_time}</h4>
                     </Link>
+                    <br></br>
                 </div>
             ))}
         </div>
