@@ -3,7 +3,7 @@ export default function Footer () {
 
 
     return (
-        <div className="footer">
+        <footer>
             <div >
                 <div className="ticketmaster">
                     <img src="https://play-lh.googleusercontent.com/KmWVboPY-BCCfiflJ-AYCPGBv86QLMsXsSpvQksC0DVR8ENV0lh-lwHnXrekpHwbQA=s256-rw" alt="ticketmasterIcon" />
@@ -22,6 +22,6 @@ export default function Footer () {
                         <a href="https://www.facebook.com">Facebook</a>
                     </div>
             </div>
-        </div>
+        </footer>
     )
 }
