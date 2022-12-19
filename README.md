@@ -2,7 +2,7 @@
 
 ![scalprLogo](https://cdn.discordapp.com/attachments/874654004213317705/1054215481227218944/265EDBC5-006A-4871-A09B-08D0E0B7BFED_4_5005_c.jpeg)
 
-In the digital age, phsyical tickets have become a thing of the past and with it the age old tradition of collecting ticket stubs. Worry no longer, as we've moved your collection space online, too! On Scalpr, you can create a personal log of all of the events and shows you've been to. Share it with your friends, or just use it to keep track of fond memories made, the rest is up to you!
+In the digital age, physical tickets have become a thing of the past and with it the age old tradition of collecting ticket stubs. Worry no longer, as we've moved your collection space online, too! On Scalpr, you can create a personal log of all of the events and shows you've been to. Share it with your friends, or just use it to keep track of fond memories made, the rest is up to you!
 
 ## Goals
 
