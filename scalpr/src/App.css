@@ -160,6 +160,33 @@ SHOWS
   display: flex;
 }
 
+.sortContainer{
+  display: flex;
+  gap: 16px;
+}
+
+.sortContainer svg{
+  fill: var(--white);
+  transform: scale(75%)
+}
+
+.sortContainer button{
+  display: inline-block;
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: var(--purple4);
+  font-weight: bold;
+  cursor: pointer;
+  transition: all .6s ease;
+}
+
+.sortContainer .activeSort{
+  color: var(--white);
+  pointer-events: none;
+  cursor: default;
+}
+
 .show .showThumbnail{
   width: 104px;
   height: 104px;
