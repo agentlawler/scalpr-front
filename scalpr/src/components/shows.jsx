@@ -12,6 +12,12 @@ export default function Shows() {
     getShows()
   }, [])
 
+shows.sort((a,b)=>{
+    let dateA = new Date(a.year, a.month, a.day);
+    let dateB = new Date(b.year, b.month, b.day);
+    return dateA - dateB;
+  })
+
   return shows ? (
     <div className="container">
         <div className="shows">
