@@ -2,38 +2,45 @@ import { Link } from "react-router-dom"
 import axios from "axios"
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
+import { ReactFragment } from "react"
 
 
 export default function ShowDetail () {
 
     const { id } = useParams()
     const [show, setShow] = useState([])
+    const [description, setDescription] = useState([])
     useEffect(() => {
         const getShow = async () => {
             const response = await axios.get(`http://localhost:8000/api/shows/${id}`)
             setShow(response.data)
+            let responseDescription = response.data.description.replace(/\r\n/g, "<br />").split("<br />");
+            setDescription(responseDescription)
         }
         getShow()
     }, [])
 
-
+    console.log(show)
+    console.log(description)
     return (
-        <div className="showdetail">
-            <div className="showdetail-container">
-                <div className="showdetail-image">
+        <div className="showdetail container">
+            
+                <aside className="showdetail-image">
                     <img src={show.image} alt={show.name} height="200px"/>
-                    </div>
-                    <div className="showdetail-info">
+                    <a href={show.tickets_url}>Get Tickets*</a>
+                    <small>*This button will take you off app.</small>
+                </aside>
+                    <div className="info">
+                        <h3>{show.month}-{show.day}-{show.year} at $venue$ | {show.door_time} | ${show.price_min}</h3>
                         <h2>{show.title}</h2>
-                        <br></br>
-                        <h3>Available {show.month}-{show.day}-{show.year} beginning at {show.door_time}</h3>
-                        <br></br>
-                        <h4>{show.description}</h4>
-                        <br></br>
-                        <h2><a href={show.tickets_url}>Find tickets here!</a></h2>
-                        <h3>Starting at ${show.price_min}</h3>
+                        <h4>Additional information:</h4>
+                        
+                        {
+                            description.length ? description.map(elem => (<p>{elem}</p>)) : (<p>loading</p>)
+                        }
+                       
                     </div>
-                </div>
+               
         </div>
     )
 }

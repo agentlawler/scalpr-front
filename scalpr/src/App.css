@@ -84,7 +84,6 @@ header nav .active{
   margin: 0 auto;
 }
 
-
 /* ===========
 VENUES
 =========== */
@@ -232,6 +231,66 @@ SHOWS
 .show .showInfo .btn-container .btn:hover{
   background: var(--black);
   color: var(--green);
+}
+
+/* ===========
+SHOW DETAIL
+=========== */
+
+.showdetail{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.showdetail aside{
+  border: 1px solid var(--purple4);
+  border-radius: 8px;
+  overflow: hidden;
+  min-width: 320px;
+  max-width: 320px;
+}
+.showdetail aside a{
+  display: block;
+  width: 80%;
+  text-align: center;
+  font-weight: bold;
+  margin: 16px auto 8px;
+  padding: 8px 16px;
+  background: var(--green);
+  color: var(--black);
+  text-decoration: none;
+  border-radius: 8px;
+}
+.showdetail aside img{
+  width: 100%;
+}
+
+.showdetail aside small{
+  text-align: center;
+  margin: 0 auto 16px;
+  display: block;
+}
+
+.showdetail .info{
+  padding-right: 32px;
+}
+
+.showdetail .info h3{
+  font-size: 16px;
+  color: var(--purple4);
+  margin-bottom: 4px;
+}
+
+.showdetail .info h2{
+  padding-bottom: 4px;
+  border-bottom: 4px solid var(--purple4);
+  margin-bottom: 24px;
+}
+
+.showdetail .info h4{
+  margin-bottom: 24px;
 }
 
 
