@@ -5,7 +5,6 @@ import { useParams } from "react-router-dom"
 
 
 export default function VenueDetail () {
-
     const { id } = useParams()
     const [venue, setVenue] = useState([])
     useEffect(() => {
@@ -18,9 +17,52 @@ export default function VenueDetail () {
         getVenue()
     }, [])
 
+// create a handleclick function that will sort the shows by name
 
-    return (
+    const handleNameClick = () => { 
+        let localVenues = {...venue}
+        localVenues.shows.sort((a,b)=>{
+            let nameA = a.title.toUpperCase()
+            let nameB = b.title.toUpperCase()
+            if (nameA < nameB) {
+                return -1
+            }
+            if (nameA > nameB) {
+                return 1
+            }
+            return 0
+        })
+        setVenue({...localVenues})
+    }
+
+    const handleDateClick = () => {
+        let localVenues = {...venue}
+        localVenues.shows.sort((a,b)=>{
+            let dateA = new Date(a.year, a.month, a.day);
+            let dateB = new Date(b.year, b.month, b.day);
+            return dateA - dateB;
+        })
+        setVenue({...localVenues})
+    }
+
+    const handlePriceClick = () => {
+        let localVenues = {...venue}
+        localVenues.shows.sort((a,b)=>{
+            let priceA = a.price_min
+            let priceB = b.price_min
+            return priceA - priceB;
+        })
+        setVenue({...localVenues})
+    }
+
+
+    return venue ? (
         <div className="venuedetail">
+            <div className="sort-button">
+                <button onClick={handleNameClick}>Sort by Name</button>
+                <button onClick={handleDateClick}>Sort by Date</button>
+                <button onClick={handlePriceClick}>Sort by Price</button>
+            </div>
             <div className="venuedetail-container">
                 <div className="venuedetail-image">
                     <img src={venue.image} alt={venue.name} height="200px"/>
@@ -46,6 +88,7 @@ export default function VenueDetail () {
                                     <div className="info">
                                         <h3>{show.title}</h3>
                                         <h4>{show.month}-{show.day}-{show.year}</h4>
+                                        <h4>{show.price_min}</h4>
                                     </div>
                                 </Link>
                                 </div>
@@ -53,6 +96,6 @@ export default function VenueDetail () {
                     </div>
                 </div>
         </div>
-    )
+    ) : ( <h1>Loading...</h1>)
 }
 // updated files
