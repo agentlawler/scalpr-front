@@ -17,7 +17,7 @@ html{
 }
 
 body{
-
+  padding: 0 8px;
 }
 
 .App{
@@ -82,13 +82,15 @@ header nav .active{
 
 .Venues{
   display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
   gap: 16px;
 }
 
 .Venues .venue, .Venues .venue a{
   display: block;
   position: relative;
-  max-width: 472px;
+  max-width: 309px;
   width: 100%;
   aspect-ratio: 1/1;
   overflow: hidden;
