@@ -233,3 +233,35 @@ footer .footerInfo{
   padding-top: 16px;
 }
 
+/* ===========
+HOME
+=========== */
+
+.landingHeader {
+  display: flex;
+  text-align: center;
+  padding-bottom: 17px;
+  opacity: .75;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.landingImage {
+  display: flex;
+  width: 450px;
+  border-radius: 16px; 
+  box-shadow: 0 0 10px 10px rgba(0,0,0,0.1);
+  border: 1px solid var(--purple4);
+  justify-content: center;
+  margin: 0 auto;
+  
+}
+
+.landingText {
+  padding-top: 17px;
+  text-align: center;
+  opacity: .75;
+  max-width: 650px;
+  margin: 0 auto;
+  
+}
