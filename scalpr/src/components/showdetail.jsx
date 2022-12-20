@@ -21,7 +21,7 @@ export default function ShowDetail () {
         <div className="showdetail">
             <div className="showdetail-container">
                 <div className="showdetail-image">
-                    <img src={show.image} alt={show.name} />
+                    <img src={show.image} alt={show.name} height="200px"/>
                     </div>
                     <div className="showdetail-info">
                         <h2>{show.title}</h2>

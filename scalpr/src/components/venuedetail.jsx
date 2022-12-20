@@ -23,7 +23,7 @@ export default function VenueDetail () {
         <div className="venuedetail">
             <div className="venuedetail-container">
                 <div className="venuedetail-image">
-                    <img src={venue.image} alt={venue.name} />
+                    <img src={venue.image} alt={venue.name} height="200px"/>
                     </div>
                     <div className="venuedetail-info">
                         <h1>{venue.name}</h1>
@@ -33,6 +33,23 @@ export default function VenueDetail () {
                         <h3>{venue.description}</h3>
                         <br></br>
                         <h2><a href={venue.website}>Check out more on their website</a></h2>
+                    </div>
+                </div>
+                <div className="venuedetail-shows">
+                    <h1>Upcoming Shows</h1>
+                    <div className="venuedetail-shows-container">
+                        {venue.shows && venue.shows.map((show) => (
+                            <div className="venuedetail-shows-show" key={show.id}>
+                                <Link to={`/shows/${show.id}`}>
+                                    <img src={show.image
+                                    } alt={show.title} height="200px"/>
+                                    <div className="info">
+                                        <h3>{show.title}</h3>
+                                        <h4>{show.month}-{show.day}-{show.year}</h4>
+                                    </div>
+                                </Link>
+                                </div>
+                        ))}
                     </div>
                 </div>
         </div>
