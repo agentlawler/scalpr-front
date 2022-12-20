@@ -11,19 +11,64 @@ export default function Shows() {
       const responseVenues = await axios.get("http://localhost:8000/api/venues/")
       setShows(response.data)
       setVenues(responseVenues.data)
-
+      shows.sort((a,b)=>{
+        let dateA = new Date(a.year, a.month, a.day);
+        let dateB = new Date(b.year, b.month, b.day);
+        return dateA - dateB;
+      })
+    
+      
     }
     getShows()
   }, [])
 
-shows.sort((a,b)=>{
+
+function sortByTitle(){
+    let localshowsort = [...shows]
+    localshowsort.sort((a,b)=>{
+    let alphasortA = a.title.toUpperCase()
+    let alphasortB = b.title.toUpperCase()
+    if (alphasortA<alphasortB){
+      return -1
+    }if (alphasortA>alphasortB){
+      return 1
+    }
+    return 0
+  })
+  setShows(localshowsort)
+}
+
+function sortByDate(){
+    let localshowsort= [...shows]
+    localshowsort.sort((a,b)=>{
     let dateA = new Date(a.year, a.month, a.day);
     let dateB = new Date(b.year, b.month, b.day);
     return dateA - dateB;
   })
+  setShows(localshowsort)
+
+}
+
+function sortByPrice(){
+  let localshowsort =[...shows]
+  localshowsort.sort((a,b)=>{
+  let priceA = a.price_min
+  let priceB = b.price_min
+  return priceA - priceB
+  })
+  setShows(localshowsort)
+}
+
+
+
 
   return shows ? (
     <div className="container">
+      <button onClick={sortByTitle}>Title</button>
+      <button onClick={sortByDate}>Date</button>
+      <button onClick={sortByPrice}>Lowest Price</button>
+
+
         <div className="shows">
             {shows.map((show) => (
                 <div className="show" key={show.id}>
@@ -47,9 +92,8 @@ shows.sort((a,b)=>{
                       </div>
                       
                   </div>
-                    
-                    
                 </div>
+                
             ))}
         </div>
     </div>
@@ -57,4 +101,3 @@ shows.sort((a,b)=>{
     <h1> Loading Please Wait ... </h1>
   )
 }
-// updated files
