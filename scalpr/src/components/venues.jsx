@@ -24,7 +24,7 @@ export default function Venues() {
                           <h3>{venue.name}</h3>
                           <h4>{venue.address}</h4>
                         </div>
-                        </Link>
+                </Link>
                 </div>
             
             ))}
