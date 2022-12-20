@@ -4,10 +4,14 @@ import axios from "axios"
 
 export default function Shows() {
   const [shows, setShows] = useState([])
+  const [venues, setVenues] = useState([])
   useEffect(() => {
     const getShows = async () => {
       const response = await axios.get("http://localhost:8000/api/shows/")
+      const responseVenues = await axios.get("http://localhost:8000/api/venues/")
       setShows(response.data)
+      setVenues(responseVenues.data)
+
     }
     getShows()
   }, [])
@@ -23,12 +27,28 @@ shows.sort((a,b)=>{
         <div className="shows">
             {shows.map((show) => (
                 <div className="show" key={show.id}>
-                    <Link to={`/shows/${show.id}`}>
-                        <img src={show.image} alt={show.title} height="200px"/>
-                        <h3>{show.title}</h3>
-                        <h4> Live on: {show.month}-{show.day}-{show.year} at {show.door_time}</h4>
+                  <div className="showDate">
+                    <h4>{show.month}-{show.day}-{show.year} at {venues.find(venue=>venue.id===show.venue).name}</h4>
+                  </div>
+                  <div className="showInfo">
+                  <Link to={`/shows/${show.id}`}>
+                    <div className="showThumbnail" style={{backgroundImage: `url(${show.image})`}}>
+                    </div>
                     </Link>
-                    <br></br>
+                    <div className="infoBody">
+                    <h3>
+                    <Link to={`/shows/${show.id}`}>
+                        {show.title}
+                    </Link>
+                    </h3>
+                    <div className="btn-container">
+                    <Link to={`/shows/${show.id}`} className="btn">More Info</Link>
+                    </div>
+                      </div>
+                      
+                  </div>
+                    
+                    
                 </div>
             ))}
         </div>
