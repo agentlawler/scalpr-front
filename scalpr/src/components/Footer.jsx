@@ -8,7 +8,7 @@ export default function Footer () {
             <div className="affiliates">
                 <div className="ticketmaster">
                 <a href="https://www.ticketmaster.com/">
-                    <img src="https://play-lh.googleusercontent.com/KmWVboPY-BCCfiflJ-AYCPGBv86QLMsXsSpvQksC0DVR8ENV0lh-lwHnXrekpHwbQA=s256-rw" alt="Ticket Master" /></a>
+                    <img src="https://image.winudf.com/v2/image1/Y29tLnRpY2tldG1hc3Rlci5tb2JpbGUuYW5kcm9pZC51a19pY29uXzE1NjAwOTI1OTdfMDYx/icon.png?w=&fakeurl=1" alt="Ticket Master" /></a>
                     </div>
                     <div className="seatgeek">
                     <a href="https://seatgeek.com/"><img src="https://seatgeek.com/images/mobile-app/iosIcon-new.png" alt="seatgeekIcon"/></a>
