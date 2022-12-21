@@ -234,24 +234,25 @@ SHOWS
 }
 
 /* ===========
-SHOW DETAIL
+DETAIL PAGE
 =========== */
 
-.showdetail{
+.showdetail, .venueFlex{
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: flex-start;
 }
 
-.showdetail aside{
+.showdetail aside, .venueFlex aside{
   border: 1px solid var(--purple4);
   border-radius: 8px;
   overflow: hidden;
   min-width: 320px;
   max-width: 320px;
+  box-shadow: 0 0 10px 10px rgba(0,0,0,0.2);
 }
-.showdetail aside a{
+.showdetail aside a, .venueFlex aside a{
   display: block;
   width: 80%;
   text-align: center;
@@ -263,34 +264,50 @@ SHOW DETAIL
   text-decoration: none;
   border-radius: 8px;
 }
-.showdetail aside img{
+.showdetail aside img, .venueFlex aside img{
   width: 100%;
 }
 
-.showdetail aside small{
+.showdetail aside small, .venueFlex aside small{
   text-align: center;
   margin: 0 auto 16px;
   display: block;
 }
 
-.showdetail .info{
+.venueFlex aside .venueContact{
+  padding: 16px;
+  text-align: center;
+}
+
+.showdetail .info, .venueFlex .info{
   padding-right: 32px;
 }
 
-.showdetail .info h3{
+.showdetail .info h3, .venueFlex .info h3{
   font-size: 16px;
   color: var(--purple4);
   margin-bottom: 4px;
 }
 
-.showdetail .info h2{
+.showdetail .info h2, .venueFlex .info h2{
   padding-bottom: 4px;
   border-bottom: 4px solid var(--purple4);
   margin-bottom: 24px;
 }
 
-.showdetail .info h4{
+.showdetail .info h4, .venueFlex .info h4{
   margin-bottom: 24px;
+}
+
+.venueFlex aside h5{
+  font-size: 16px;
+  color: var(--purple4);
+  margin-bottom: 8px;
+}
+
+.venueFlex aside address{
+  font-style: normal;
+  margin-bottom: 16px;
 }
 
 
@@ -336,7 +353,7 @@ HOME
   display: flex;
   width: 450px;
   border-radius: 16px; 
-  box-shadow: 0 0 10px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px 10px rgba(0,0,0,0.2);
   border: 1px solid var(--purple4);
   justify-content: center;
   margin: 0 auto;
