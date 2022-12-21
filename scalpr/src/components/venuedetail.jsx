@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import SingleShow from "./SingleShow";
+
 
 export default function VenueDetail() {
   const { id } = useParams();
@@ -64,8 +65,17 @@ export default function VenueDetail() {
     setVenue({ ...localVenues });
   };
 
+  let navigate = useNavigate()
+    const handleBackClick = (e)=>{
+        e.preventDefault()
+        navigate(-1);
+    }
+
   return venue ? (
     <div className="container">
+      <div className="backContainer">
+        <button onClick={handleBackClick}>Back</button>
+        </div>
         <div className="venueFlex">
       <aside className="venuedetail-image">
         <img src={venue.image} alt={venue.name} height="200px" />
@@ -97,7 +107,7 @@ export default function VenueDetail() {
       </div>
       <div className="venuedetail">
         <div className="venuedetail-shows">
-          <h1>Upcoming Shows</h1>
+          <h2>Upcoming Shows</h2>
           <div className="sortContainer">
             <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48">
               <path d="M6 36v-3h12v3Zm0-10.5v-3h24v3ZM6 15v-3h36v3Z" />

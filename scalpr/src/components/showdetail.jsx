@@ -2,6 +2,7 @@ import { Link } from "react-router-dom"
 import axios from "axios"
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 
 export default function ShowDetail () {
@@ -22,10 +23,20 @@ export default function ShowDetail () {
         getShow()
     }, [])
 
+    let navigate = useNavigate()
+    const handleBackClick = (e)=>{
+        e.preventDefault()
+        navigate(-1);
+    }
+
     console.log(show)
     console.log(venue)
     console.log(description)
     return (
+        <>
+        <div className="backContainer">
+        <button onClick={handleBackClick}>Back</button>
+        </div>
         <div className="showdetail container">
             
                 <aside className="showdetail-image">
@@ -45,6 +56,7 @@ export default function ShowDetail () {
                     </div>
                
         </div>
+        </>
     )
 }
 // updated files

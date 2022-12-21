@@ -289,6 +289,18 @@ DETAIL PAGE
   margin-bottom: 4px;
 }
 
+.showdetail .info p, .venueFlex .info p{
+  margin-bottom: 16px;
+}
+
+.venuedetail{
+  padding-top: 32px;
+}
+
+.venuedetail h2{
+  text-align: center;
+}
+
 .showdetail .info h2, .venueFlex .info h2{
   padding-bottom: 4px;
   border-bottom: 4px solid var(--purple4);
@@ -367,4 +379,45 @@ HOME
   max-width: 650px;
   margin: 0 auto;
   
+}
+
+.backContainer{
+  max-width: 960px;
+  margin: 0 auto;
+  padding-bottom: 32px;
+}
+
+.backContainer button{
+  font-weight: bold;
+  font-size: 16px;
+  color: var(--white);
+  background: none;
+  transition: all .6s ease;
+  outline: none;
+  stroke: none;
+  opacity: .7;
+  border-style: none;
+  position: relative;
+  padding-left: 20px;
+  cursor: pointer
+}
+
+.backContainer button:hover{
+  opacity: 1;
+  padding-left: 24px;
+}
+
+.backContainer button:before{
+  content: '';
+  display: block;
+  border-left: 3px solid var(--white);
+  border-bottom: 3px solid var(--white);
+  width: 8px;
+  height: 8px;
+  display: absolute;
+  left: 0;
+  bottom: 4px;
+  position: absolute;
+  transform: rotate(45deg);
+  transition: all .6s ease;
 }
