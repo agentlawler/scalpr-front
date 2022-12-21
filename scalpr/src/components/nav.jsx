@@ -9,9 +9,9 @@ export default function Nav () {
     return (
         <nav>
             <ul className="navbar-links">
-                <li><NavLink to="/">Home</NavLink></li>
-                <li><NavLink to="/venues">Venues</NavLink></li>
-                <li><NavLink to="/shows">Shows</NavLink></li>
+                <li><NavLink exact to="/" end>Home</NavLink></li>
+                <li><NavLink exact to="/venues" end>Venues</NavLink></li>
+                <li><NavLink exact to="/shows" end>Shows</NavLink></li>
                 
             </ul>
         </nav>

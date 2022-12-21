@@ -2,18 +2,20 @@ import { Link } from "react-router-dom"
 import axios from "axios"
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
-import { ReactFragment } from "react"
 
 
 export default function ShowDetail () {
 
     const { id } = useParams()
     const [show, setShow] = useState([])
+    const [venue, setVenue] = useState([])
     const [description, setDescription] = useState([])
     useEffect(() => {
         const getShow = async () => {
             const response = await axios.get(`http://localhost:8000/api/shows/${id}`)
             setShow(response.data)
+            const responseVenue = await axios.get(`http://localhost:8000/api/venues/${response.data.venue}`)
+            setVenue(responseVenue.data)
             let responseDescription = response.data.description.replace(/\r\n/g, "<br />").split("<br />");
             setDescription(responseDescription)
         }
@@ -21,6 +23,7 @@ export default function ShowDetail () {
     }, [])
 
     console.log(show)
+    console.log(venue)
     console.log(description)
     return (
         <div className="showdetail container">
@@ -31,7 +34,7 @@ export default function ShowDetail () {
                     <small>*This button will take you off app.</small>
                 </aside>
                     <div className="info">
-                        <h3>{show.month}-{show.day}-{show.year} at $venue$ | {show.door_time} | ${show.price_min}</h3>
+                        <h3>{show.month}-{show.day}-{show.year} at {venue.name} | {show.door_time} | ${show.price_min}</h3>
                         <h2>{show.title}</h2>
                         <h4>Additional information:</h4>
                         
